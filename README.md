@@ -1,1 +1,1 @@
-#[ModKit Wiki](../../wiki)
+﻿This is a modded module for “Keep Talking and Nobody Explodes” called “A Mistake”.
