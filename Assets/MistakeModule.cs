@@ -27,7 +27,7 @@ public class MistakeModule : MonoBehaviour {
     // Ran as bomb loads
     private void Awake() {
         moduleId = moduleIdCounter++;
-        Debug.LogFormat("[Mistake #{0}] Uh oh, this isn't supposed to be here.", moduleId);
+        Debug.LogFormat("[Mistake #{0}] Uh oh, this module isn't supposed to be here.", moduleId);
 
         // Delegation
         ModuleButton.OnInteract += delegate () {
@@ -115,7 +115,13 @@ public class MistakeModule : MonoBehaviour {
         // If the seconds section of the bomb timer are not equal to the sum of the digits of the serial number
         if (!(((int) Bomb.GetTime()) % 60 == sumOfDigits)) {
             Debug.LogFormat("[Mistake #{0}] The module was not touched at the right time! It struck!", moduleId);
-            Debug.LogFormat("[Mistake #{0}] We told you to touch it when the sections section of the timer were {1}!", moduleId, sumOfDigits);
+
+            if (sumOfDigits < 10)
+                Debug.LogFormat("[Mistake #{0}] We told you to touch it when the sections section of the timer were 0{1}!", moduleId, sumOfDigits);
+
+            else
+                Debug.LogFormat("[Mistake #{0}] We told you to touch it when the sections section of the timer were {1}!", moduleId, sumOfDigits);
+
             GetComponent<KMBombModule>().HandleStrike();
         }
     }

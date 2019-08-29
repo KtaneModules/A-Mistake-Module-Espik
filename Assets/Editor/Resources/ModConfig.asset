@@ -18,7 +18,7 @@ MonoBehaviour:
 
 
 
-    Version: v1.1
+    Version: v1.2
 
 
     Module ID: MistakeModule
@@ -31,6 +31,6 @@ MonoBehaviour:
 
 
     GitHub Repo: https://github.com/Espik/A-Mistake-Module'
-  version: v1.1
+  version: v1.2
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 113ff4786a9e5074288a3b7a55d5d32f, type: 3}
