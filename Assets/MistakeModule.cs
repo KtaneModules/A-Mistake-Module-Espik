@@ -200,6 +200,7 @@ public class MistakeModule : MonoBehaviour {
             while (((int) Bomb.GetTime()) % 60 != value)
                 yield return "trycancel";
 
+            yield return "solve";
             ModuleButton.OnInteract();
         }
     }
